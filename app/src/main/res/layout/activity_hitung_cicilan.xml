@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".HitungCicilanActivity">
+
+	<TextView
+		android:id="@+id/tetHeader"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:background="@drawable/border"
+		android:gravity="center"
+		android:padding="5dp"
+		android:text="Simulasi Kredit - Berdasar Harga Mobil"
+		android:textColor="#E4DEAE"
+		android:textSize="18sp"
+		app:layout_constraintTop_toTopOf="parent"
+		tools:layout_editor_absoluteX="-39dp" />
+
+	<EditText
+		android:id="@+id/editTextNumber"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="24dp"
+		android:hint="250000000"
+		android:ems="10"
+		android:inputType="number"
+		android:minHeight="48dp"
+		app:layout_constraintStart_toStartOf="@+id/tenorTextField"
+		app:layout_constraintTop_toBottomOf="@+id/tetHeader"
+		tools:ignore="SpeakableTextPresentCheck" />
+
+	<EditText
+		android:id="@+id/tenorTextField"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="24dp"
+		android:ems="10"
+		android:hint="5"
+		android:inputType="number"
+		android:minHeight="48dp"
+		app:layout_constraintStart_toStartOf="@+id/bungaTF"
+		app:layout_constraintTop_toBottomOf="@+id/editTextNumber"
+		tools:ignore="SpeakableTextPresentCheck" />
+
+	<EditText
+		android:id="@+id/bungaTF"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="8dp"
+		android:hint="4.8"
+		android:layout_marginTop="24dp"
+		android:ems="10"
+		android:inputType="numberDecimal"
+		android:minHeight="48dp"
+		app:layout_constraintStart_toEndOf="@+id/bungaTV"
+		app:layout_constraintTop_toBottomOf="@+id/tenorTextField"
+		tools:ignore="SpeakableTextPresentCheck" />
+
+	<EditText
+		android:id="@+id/dpTF"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="8dp"
+		android:layout_marginTop="24dp"
+		android:ems="10"
+		android:hint="30"
+		android:inputType="number"
+		android:minHeight="48dp"
+		app:layout_constraintStart_toEndOf="@+id/bungaTV"
+		app:layout_constraintTop_toBottomOf="@+id/bungaTF"
+		tools:ignore="SpeakableTextPresentCheck" />
+
+	<TextView
+		android:id="@+id/textViewHargaMobil"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="24dp"
+		android:text="Harga Mobil : "
+		app:layout_constraintBottom_toBottomOf="@+id/editTextNumber"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="@+id/editTextNumber" />
+
+	<TextView
+		android:id="@+id/textViewHargaMobil2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="24dp"
+		android:text="Harga Mobil"
+		app:layout_constraintBottom_toBottomOf="@+id/editTextNumber"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="@+id/editTextNumber" />
+
+	<TextView
+		android:id="@+id/descHargaMobilTV"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="8dp"
+		android:text="Rupiah"
+		app:layout_constraintBottom_toBottomOf="@+id/editTextNumber"
+		app:layout_constraintStart_toEndOf="@+id/editTextNumber"
+		app:layout_constraintTop_toTopOf="@+id/editTextNumber" />
+
+	<TextView
+		android:id="@+id/TenorTV"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Tenor"
+		app:layout_constraintBottom_toBottomOf="@+id/tenorTextField"
+		app:layout_constraintStart_toStartOf="@+id/textViewHargaMobil"
+		app:layout_constraintTop_toTopOf="@+id/tenorTextField" />
+
+	<TextView
+		android:id="@+id/descTenor"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="8dp"
+		android:text="Tahun"
+		app:layout_constraintBottom_toBottomOf="@+id/tenorTextField"
+		app:layout_constraintStart_toEndOf="@+id/tenorTextField"
+		app:layout_constraintTop_toTopOf="@+id/tenorTextField" />
+
+	<TextView
+		android:id="@+id/bungaTV"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text=" Bunga Pinjaman"
+		app:layout_constraintBottom_toBottomOf="@+id/bungaTF"
+		app:layout_constraintStart_toStartOf="@+id/TenorTV"
+		app:layout_constraintTop_toTopOf="@+id/bungaTF" />
+
+	<TextView
+		android:id="@+id/bungaTahunTF"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="8dp"
+		android:text="%/Tahun"
+		app:layout_constraintBottom_toBottomOf="@+id/bungaTF"
+		app:layout_constraintStart_toEndOf="@+id/bungaTF"
+		app:layout_constraintTop_toTopOf="@+id/bungaTF" />
+
+	<TextView
+		android:id="@+id/uangMukaTV"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Uang Muka"
+		app:layout_constraintBottom_toBottomOf="@+id/dpTF"
+		app:layout_constraintStart_toStartOf="@+id/bungaTV"
+		app:layout_constraintTop_toTopOf="@+id/dpTF" />
+
+	<TextView
+		android:id="@+id/dpDescTV"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="8dp"
+		android:text="%"
+		app:layout_constraintBottom_toBottomOf="@+id/dpTF"
+		app:layout_constraintStart_toEndOf="@+id/dpTF"
+		app:layout_constraintTop_toTopOf="@+id/dpTF" />
+
+	<Button
+		android:id="@+id/periksaButton"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="64dp"
+		android:textColor="@color/white"
+		android:backgroundTint="#ae2012"
+		android:text="Hitung Hasil"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/dpTF" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
